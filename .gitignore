@@ -1,0 +1,10 @@
+.*
+!/.gitignore
+!/.editorconfig
+
+node_modules
+languages
+vendor
+front/assets/dist
+admin/assets/dist
+svn-assets

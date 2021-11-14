@@ -1,0 +1,28 @@
+{
+  "name": "hectorfarahani/super-plugin",
+  "type": "wordpress-plugin",
+  "license": "GPLv3",
+  "authors": [
+    {
+      "name": "Hossein",
+      "email": "h.farahani@outlook.com"
+    }
+  ],
+  "autoload": {
+    "files": [
+      "constants.php",
+      "admin/ajax.php",
+      "includes/hooks.php",
+      "includes/ajax.php",
+      "includes/options.php"
+    ],
+    "classmap": [
+      "admin",
+      "includes",
+      "front"
+    ]
+  },
+  "require": {
+    "ext-json": "*"
+  }
+}
