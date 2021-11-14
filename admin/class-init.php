@@ -1,8 +1,8 @@
 <?php
 
-namespace Super_Plugin\Admin;
+namespace Banano_Pay\Admin;
 
-use Super_Plugin\Includes\Functions;
+use Banano_Pay\Includes\Functions;
 
 class Init {
 
@@ -27,17 +27,17 @@ class Init {
 
 	public function assets( $hook ) {
 		if ( 'toplevel_page_super-plugin' === $hook ) {
-			wp_enqueue_style( 'supl-admin' );
-			wp_enqueue_script( 'supl-admin' );
+			wp_enqueue_style( 'bnnp-admin' );
+			wp_enqueue_script( 'bnnp-admin' );
 		}
 	}
 
 	public function add_menu_page() {
 		add_menu_page(
-			__( 'Super Plugin', 'super-plugin' ),
-			__( 'Menu page', 'super-plugin' ),
+			__( 'Banano Pay', 'banano-pay' ),
+			__( 'Menu page', 'banano-pay' ),
 			'manage_options',
-			'super-plugin',
+			'banano-pay',
 			array( $this, 'renbder_settings_page' ),
 			'dashicons-smiley',
 			28
@@ -46,19 +46,19 @@ class Init {
 
 	public function renbder_settings_page() {
 		?>
-		<div class="supl-admin-wrapper">
-			<div class="supl-admin-header">
-				<div class="supl-logo">
+		<div class="bnnp-admin-wrapper">
+			<div class="bnnp-admin-header">
+				<div class="bnnp-logo">
 
 				</div>
-				<div class="supl-admin-title">
+				<div class="bnnp-admin-title">
 					<h1><?php esc_html_e( 'Settings Page', '' ); ?></h1>
 				</div>
 			</div>
-			<div class="supl-admin-main">
-				<section class="supl-settings">
+			<div class="bnnp-admin-main">
+				<section class="bnnp-settings">
 					<h2><?php esc_html_e( 'Settings:' ); ?></h2>
-				<?php wp_nonce_field('supl'); ?>
+				<?php wp_nonce_field('bnnp'); ?>
 				</section>
 			</div>
 		</div>

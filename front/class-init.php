@@ -1,6 +1,6 @@
 <?php
 
-namespace Super_Plugin\Front;
+namespace Banano_Pay\Front;
 
 class Init {
 
@@ -23,7 +23,7 @@ class Init {
 	}
 
 	public function assets() {
-		wp_enqueue_script( 'supl-front' );
-		wp_enqueue_style( 'supl-front' );
+		wp_enqueue_script( 'bnnp-front' );
+		wp_enqueue_style( 'bnnp-front' );
 	}
 }

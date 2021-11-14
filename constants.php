@@ -1,16 +1,16 @@
 <?php
 
-namespace Super_Plugins;
+namespace Banano_Pay;
 
-define( 'SUPL_PATH', plugin_dir_path( __FILE__ ) );
-define( 'SUPL_URL', plugin_dir_url( __FILE__ ) );
+define( 'BNNP_PATH', plugin_dir_path( __FILE__ ) );
+define( 'BNNP_URL', plugin_dir_url( __FILE__ ) );
 
-define( 'SUPL_VERSION', '0.0.0' );
-define( 'SUPL_SLUG', 'super_plugin' ); // snake_case
+define( 'BNNP_VERSION', '0.0.0' );
+define( 'BNNP_SLUG', 'banano_pay' ); // snake_case
 
-define( 'SUPL_ADMIN_PATH', SUPL_PATH . 'admin/' );
-define( 'SUPL_ADMIN_URL', SUPL_URL . 'admin/' );
+define( 'BNNP_ADMIN_PATH', BNNP_PATH . 'admin/' );
+define( 'BNNP_ADMIN_URL', BNNP_URL . 'admin/' );
 
-define( 'SUPL_FRONT_ASSETS', SUPL_URL . 'front/assets/dist/' );
-define( 'SUPL_IMG_ASSETS', SUPL_URL . 'front/assets/img/' );
-define( 'SUPL_ADMIN_ASSETS', SUPL_ADMIN_URL . 'assets/dist/' );
+define( 'BNNP_FRONT_ASSETS', BNNP_URL . 'front/assets/dist/' );
+define( 'BNNP_IMG_ASSETS', BNNP_URL . 'front/assets/img/' );
+define( 'BNNP_ADMIN_ASSETS', BNNP_ADMIN_URL . 'assets/dist/' );

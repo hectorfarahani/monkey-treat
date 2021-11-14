@@ -1,6 +1,6 @@
-=== Super Plugin ===
+=== Banano Pay ===
 Contributors: h71
-Donate link: https://dogechain.info/address/DHekFiwAXYc194FYD4jiv87PNv6WWD5K64
+Donate link: ban_1xcycnoopeouoxidqdznsxt9us44519akei1bfnuprjt3cuq9x9iddqc3u4k
 Tags: Plugin, Boilerplate
 Requires at least: 5.1
 Tested up to: 5.6

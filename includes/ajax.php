@@ -1,3 +1,3 @@
 <?php
 
-namespace Super_Plugin\Includes;
+namespace Banano_Pay\Includes;

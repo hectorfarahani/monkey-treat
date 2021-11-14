@@ -1,6 +1,6 @@
 var version = '0.0.0';
 var versioningFiles = [
-  'super-plugin.php',
+  'banano-pay.php',
   'constants.php',
   'readme.txt'
 ];
@@ -48,15 +48,15 @@ gulp.task(
       .pipe(
         wpPot(
           {
-            domain: 'super-plugin',
-            destFile: 'super-plugin.pot',
-            package: 'super-plugin',
-            lastTranslator: 'Super Plugin team<you@email.test>',
-            team: 'Super Plugin team <you@email.test>'
+            domain: 'banano-pay',
+            destFile: 'banano-pay.pot',
+            package: 'banano-pay',
+            lastTranslator: 'Banano Pay team<you@email.test>',
+            team: 'Banano Pay team <you@email.test>'
           }
         )
       )
-      .pipe(gulp.dest('languages/super-plugin.pot'))
+      .pipe(gulp.dest('languages/banano-pay.pot'))
   }
 );
 
@@ -93,10 +93,10 @@ gulp.task(
     )
       .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
       .pipe(save('before-dest'))
-      .pipe(rename({ basename: 'supl-admin', dirname: '' }))
+      .pipe(rename({ basename: 'bnnp-admin', dirname: '' }))
       .pipe(gulp.dest('admin/assets/dist/css'))
       .pipe(cleanCSS())
-      .pipe(rename({ basename: 'supl-admin', suffix: '.min', dirname: '' }))
+      .pipe(rename({ basename: 'bnnp-admin', suffix: '.min', dirname: '' }))
       .pipe(gulp.dest('admin/assets/dist/css'))
 
     gulp.src(
@@ -106,10 +106,10 @@ gulp.task(
     )
       .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
       .pipe(save('before-dest'))
-      .pipe(rename({ basename: 'supl-front', dirname: '' }))
+      .pipe(rename({ basename: 'bnnp-front', dirname: '' }))
       .pipe(gulp.dest('front/assets/dist/css'))
       .pipe(cleanCSS())
-      .pipe(rename({ basename: 'supl-front', suffix: '.min', dirname: '' }))
+      .pipe(rename({ basename: 'bnnp-front', suffix: '.min', dirname: '' }))
       .pipe(gulp.dest('front/assets/dist/css'))
     cb();
   }
@@ -127,10 +127,10 @@ gulp.task(
       .pipe(babel({
         presets: ['@babel/env']
       }))
-      .pipe(rename({ basename: 'supl-admin', dirname: '' }))
+      .pipe(rename({ basename: 'bnnp-admin', dirname: '' }))
       .pipe(gulp.dest('admin/assets/dist/js'))
       .pipe(uglify())
-      .pipe(rename({ basename: 'supl-admin', suffix: '.min', dirname: '' }))
+      .pipe(rename({ basename: 'bnnp-admin', suffix: '.min', dirname: '' }))
       .pipe(gulp.dest('admin/assets/dist/js'));
 
     gulp.src(
@@ -141,10 +141,10 @@ gulp.task(
       .pipe(babel({
         presets: ['@babel/env']
       }))
-      .pipe(rename({ basename: 'supl-front', dirname: '' }))
+      .pipe(rename({ basename: 'bnnp-front', dirname: '' }))
       .pipe(gulp.dest('front/assets/dist/js'))
       .pipe(uglify())
-      .pipe(rename({ basename: 'supl-front', suffix: '.min', dirname: '' }))
+      .pipe(rename({ basename: 'bnnp-front', suffix: '.min', dirname: '' }))
       .pipe(gulp.dest('front/assets/dist/js'));
 
     cb();
@@ -158,7 +158,7 @@ gulp.task(
     gulp.src(versioningFiles)
       .pipe(
         replace(
-          /(\* Version:.+\s|SUPL_VERSION.*|Stable tag:.*\s)(\d+\.\d+\.\d+)/g,
+          /(\* Version:.+\s|BNNP_VERSION.*|Stable tag:.*\s)(\d+\.\d+\.\d+)/g,
           function (match, p1, p2) {
             if (p2 === version) {
               console.log('The current version is ' + version + '. No changes.')
@@ -213,7 +213,7 @@ gulp.task('watch', function (cb) {
 // Copy task
 gulp.task('copy', function () {
   return gulp.src(srcs)
-    .pipe(gulp.dest('/home/hector/svn-releases/super-plugin/trunk'))
+    .pipe(gulp.dest('/home/hector/svn-releases/banano-pay/trunk'))
 })
 
 gulp.task('default', gulp.series('clean', 'version', 'generatePot', 'css', 'js'));

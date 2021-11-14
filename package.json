@@ -1,5 +1,5 @@
 {
-  "name": "super-plugin",
+  "name": "banano-pay",
 	"main": "gulpfile.js",
   "devDependencies": {
     "@babel/core": "^7.14.6",
@@ -15,7 +15,7 @@
     "gulp-load-plugins": "^2.0.7",
     "gulp-rename": "^2.0.0",
     "gulp-replace": "^1.1.3",
-    "gulp-sass": "^4.1.0",
+    "gulp-sass": "^5.0.0",
     "gulp-save": "^1.3.0",
     "gulp-touch-fd": "2.0.0",
     "gulp-uglify": "^3.0.2",
