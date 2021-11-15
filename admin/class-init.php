@@ -43,7 +43,7 @@ class Init {
 			<path stroke="#000" stroke-linecap="round" stroke-width="3" d="M2 23v-1l1-1v-3l1-3 1-2 1-1 1-2 1-1V8l3-3 2-1h1l1-1h1l1-1h2a433 433 0 0 1 15 2l3 1h1l1 2 2 2 2 3 1 3v2l-1 1h-6l-4-1-1-1h-1l-1-1v-1h-1l-2-2h-5l-4 2-1 1-3 2-2 2-1 2-2 1-1 1-4 1H3v-1"/>
 			<path stroke="#000" stroke-linecap="round" stroke-width="3" d="m18 19 1 2 1 3 7 5 5 2 2 1h2l4 1h5l3-1 4-2 2-2 3-2 2-3 1-4 1-3 1-3-1-1c-1-2-3 0-5 0l-3 2-2 1-2 2-1 1-2 1-2 2v1h-2l-1 1-2 1h-2l-2-1-4-2-2-2-3-1-5-1-2 2"/>
 		  </svg>'),
-			28
+			88
 		);
 	}
 
