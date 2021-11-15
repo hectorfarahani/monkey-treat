@@ -14,7 +14,9 @@
       "admin/ajax.php",
       "includes/hooks.php",
       "includes/ajax.php",
-      "includes/options.php"
+      "includes/options.php",
+      "includes/qr.php",
+      "includes/functions.php"
     ],
     "classmap": [
       "admin",

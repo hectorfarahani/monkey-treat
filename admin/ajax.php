@@ -1,13 +1,22 @@
 <?php
 
-add_action( 'wp_ajax_supl_save_settings', 'supl_save_settings' );
+add_action( 'wp_ajax_bnnp_validate_address', 'bnnp_validate_address' );
 
-function supl_save_settings() {
+function bnnp_validate_address() {
 
-	check_ajax_referer( 'supl_save_settings', 'nonce' );
+	check_ajax_referer( 'bnnp_save_settings', 'nonce' );
 
-	$post_type = sanitize_text_field( $_POST['option'] );
-	$value     = sanitize_text_field( $_POST['value'] );
+	$address = sanitize_text_field( $_POST['address'] );
 
+	if ( 64 !== strlen( $address ) ) {
+		wp_send_json_error(__('Banano address is not valid. It should have exactly 64 characters.', 'banano-pay'));
+	}
 
+	if ( 0 !== strpos( $address, 'ban_' ) ) {
+		wp_send_json_error(__('Banano address is not valid. It should start with <code>ban_</code>.', 'banano-pay'));
+	}
+
+	update_option( '_banano_pay_address', $address );
+
+	wp_send_json_success(__('Saved!', 'banano-pay'));
 }

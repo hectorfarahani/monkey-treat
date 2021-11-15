@@ -51,7 +51,7 @@ class Assets {
 	}
 
 	public function register_admin_scripts() {
-		wp_register_script( 'BNNP-admin', BNNP_ADMIN_ASSETS . 'js/bnnp-admin' . $this->suffix . '.js', BNNP_VERSION, true );
+		wp_register_script( 'bnnp-admin', BNNP_ADMIN_ASSETS . 'js/bnnp-admin' . $this->suffix . '.js', BNNP_VERSION, true );
 	}
 
 	public function register_admin_styles() {
@@ -63,6 +63,6 @@ class Assets {
 			'ajaxurl' => admin_url( 'admin-ajax.php' ),
 		);
 
-		wp_localize_script( 'bnnp-front', 'SUPER_PLUGINS', $i10n );
+		wp_localize_script( 'bnnp-front', 'BANANO_PAY', $i10n );
 	}
 }

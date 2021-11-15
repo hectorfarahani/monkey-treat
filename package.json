@@ -1,6 +1,6 @@
 {
   "name": "banano-pay",
-	"main": "gulpfile.js",
+  "main": "gulpfile.js",
   "devDependencies": {
     "@babel/core": "^7.14.6",
     "@babel/preset-env": "^7.14.7",
@@ -19,6 +19,7 @@
     "gulp-save": "^1.3.0",
     "gulp-touch-fd": "2.0.0",
     "gulp-uglify": "^3.0.2",
-    "gulp-wp-pot": "^2.5.0"
+    "gulp-wp-pot": "^2.5.0",
+    "sass": "^1.43.4"
   }
 }

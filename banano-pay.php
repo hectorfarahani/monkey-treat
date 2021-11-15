@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Banano Pay
  * Description: ‌Banano blockchain integration with WordPress.
- * Version:     1.0.0
+ * Version:     0.0.0
  * Author:      h71
  * Text Domain: banano-pay
  * Domain Path: /languages
@@ -15,6 +15,7 @@ namespace Banano_Pay;
 use Banano_Pay\Front\Init as Front;
 use Banano_Pay\Admin\Init as Admin;
 use Banano_Pay\Includes\Assets;
+use Banano_Pay\Includes\Elementor;
 
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
@@ -39,3 +40,4 @@ function deactivation_hook_callback() {
 Admin::instance();
 Assets::instance();
 Front::instance();
+Elementor::instance();

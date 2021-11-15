@@ -20,10 +20,12 @@ var srcs = [
   '!front/assets/src/**'
 ];
 
+
+
 var gulp = require('gulp');
 var wpPot = require('gulp-wp-pot');
 var clean = require('gulp-clean');
-var sass = require('gulp-sass');
+var sass = require('gulp-sass')(require('sass'));
 var save = require('gulp-save');
 var rename = require('gulp-rename');
 var cleanCSS = require('gulp-clean-css');
