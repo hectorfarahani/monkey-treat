@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Banano Pay
  * Description: ‌Banano blockchain integration with WordPress.
- * Version:     0.0.0
+ * Version:     1.0.0
  * Author:      h71
  * Text Domain: banano-pay
  * Domain Path: /languages

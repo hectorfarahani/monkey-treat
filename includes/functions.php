@@ -10,5 +10,5 @@ function bnnp_get_QR_code() {
 	ob_end_clean();
 	imagedestroy($im);
 
-	return '<img src="data:image/png;base64,' . base64_encode($image_data) . '">';
+	return '<figure><img src="data:image/png;base64,' . base64_encode($image_data) . '"></figure>';
 }
