@@ -9,7 +9,7 @@ Stable tag: 0.0.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Banano blockchain integration with WordPress.
+Generate link and QR image to receive Banano donation.
 
 == Description ==
 
