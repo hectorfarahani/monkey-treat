@@ -18,7 +18,10 @@ document.addEventListener("DOMContentLoaded", function () {
           messageArea.style.color = 'red';
         } else {
           messageArea.style.color = 'green';
-          document.getElementById('ban-lovely-monkey').src = 'https://monkey.banano.cc/api/v1/monkey/' + address;
+          let img = document.createElement('img');
+          img.id = 'ban-lovely-monkey';
+          img.src = 'https://monkey.banano.cc/api/v1/monkey/' + address;
+          document.getElementById('ban-address').parentElement.appendChild(img)
         }
       });
   });

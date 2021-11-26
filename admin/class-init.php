@@ -40,7 +40,7 @@ class Init {
 			'manage_options',
 			'banano-pay',
 			array( $this, 'renbder_settings_page' ),
-		 );
+		);
 	}
 
 	public function renbder_settings_page() {
@@ -64,10 +64,12 @@ class Init {
 						<?php _e( 'Banano address:', 'banano-pay' ); ?>
 					</label>
 					<br>
-					<input type="text" id="ban-address" name="ban_address" placeholder="ban_" size="64" pattern="[a-z0-9]{64}" value="<?php echo esc_attr(get_option('_banano_pay_address')); ?>">
-					<?php wp_nonce_field('bnnp_save_settings'); ?>
-					<input type="submit" id="save_ban_address" name="save_ban_address" value="<?php esc_attr_e('Save', 'banano-pay'); ?>">
-					<img id="ban-lovely-monkey" src="<?php echo esc_attr(esc_url('https://monkey.banano.cc/api/v1/monkey/' . get_option('_banano_pay_address') . '?svc=banano-pay')); ?>">
+					<input type="text" id="ban-address" name="ban_address" placeholder="ban_" size="64" pattern="[a-z0-9]{64}" value="<?php echo esc_attr( bnnp_get_option( '_banano_pay_address' ) ); ?>">
+					<?php wp_nonce_field( 'bnnp_save_settings' ); ?>
+					<input type="submit" id="save_ban_address" name="save_ban_address" value="<?php esc_attr_e( 'Save', 'banano-pay' ); ?>">
+					<?php if ( bnnp_get_option( '_banano_pay_address' ) ) : ?>
+					<img id="ban-lovely-monkey" src="<?php echo esc_attr( esc_url( 'https://monkey.banano.cc/api/v1/monkey/' . bnnp_get_option( '_banano_pay_address' ) . '?svc=banano-pay' ) ); ?>">
+					<?php endif; ?>
 					<div id="ban-message-area"></div>
 				</section>
 			</div>

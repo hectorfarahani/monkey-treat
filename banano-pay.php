@@ -39,5 +39,4 @@ function deactivation_hook_callback() {
 
 Admin::instance();
 Assets::instance();
-Front::instance();
 Elementor::instance();

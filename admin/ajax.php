@@ -16,7 +16,7 @@ function bnnp_validate_address() {
 		wp_send_json_error(__('Banano address is not valid. It should start with <code>ban_</code>.', 'banano-pay'));
 	}
 
-	update_option( '_banano_pay_address', $address );
+	bnnp_update_option( '_banano_pay_address', $address );
 
 	wp_send_json_success(__('Saved!', 'banano-pay'));
 }
