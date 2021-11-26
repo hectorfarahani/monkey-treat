@@ -56,7 +56,7 @@ class Init {
 				<span class="bnnp-admin-title">
 					<h1><?php esc_html_e( 'Banano pay', 'banano-pay' ); ?></h1>
 				</span>
-				<p><?php esc_html_e( 'Unofficial Banano blockchain integration for WordPress', 'banano-pay' ); ?></p>
+				<p><?php esc_html_e( 'Unofficial Banano plugin for WordPress.', 'banano-pay' ); ?></p>
 			</div>
 			<div class="bnnp-admin-main">
 				<section class="bnnp-settings">

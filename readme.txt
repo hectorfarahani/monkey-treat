@@ -13,7 +13,7 @@ Generate link and QR image to receive Banano donation.
 
 == Description ==
 
-Generate link and QR image to receive Banano donation.
+Generate link and QR image to receive Banano donation. This is NOT official plugin of Banano and It is a community project made by love for Banano.
 
 == Installation ==
 
