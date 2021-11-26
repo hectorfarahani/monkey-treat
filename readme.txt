@@ -4,7 +4,7 @@ Tags: Payment, Pay, Cryptocurrency, Donate, Donation, QR Code
 Requires at least: 5.2
 Tested up to: 5.8.2
 Requires PHP: 7.0
-Stable tag: 1.0.0
+Stable tag: 0.0.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Donate link: https://farahani.dev/donation

@@ -1,4 +1,4 @@
-var version = '1.0.0';
+var version = '0.0.0';
 var versioningFiles = [
   'banano-pay.php',
   'constants.php',
@@ -17,7 +17,6 @@ var srcs = [
   '!*.yml',
   '!svn-assets/**',
   '!admin/assets/src/**',
-  '!front/assets/src/**'
 ];
 
 
@@ -42,7 +41,6 @@ gulp.task(
     var files = [
       '*.php',
       'admin/**/*.php',
-      'front/**/*.php',
       'includes/**/*.php',
     ];
 
@@ -69,7 +67,6 @@ gulp.task(
     return gulp.src(
       [
         'admin/assets/dist/*',
-        'front/assets/dist/*',
         'languages/*',
       ]
     )
@@ -101,18 +98,6 @@ gulp.task(
       .pipe(rename({ basename: 'bnnp-admin', suffix: '.min', dirname: '' }))
       .pipe(gulp.dest('admin/assets/dist/css'))
 
-    gulp.src(
-      [
-        'front/assets/src/scss/front.scss',
-      ]
-    )
-      .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
-      .pipe(save('before-dest'))
-      .pipe(rename({ basename: 'bnnp-front', dirname: '' }))
-      .pipe(gulp.dest('front/assets/dist/css'))
-      .pipe(cleanCSS())
-      .pipe(rename({ basename: 'bnnp-front', suffix: '.min', dirname: '' }))
-      .pipe(gulp.dest('front/assets/dist/css'))
     cb();
   }
 );
@@ -134,20 +119,6 @@ gulp.task(
       .pipe(uglify())
       .pipe(rename({ basename: 'bnnp-admin', suffix: '.min', dirname: '' }))
       .pipe(gulp.dest('admin/assets/dist/js'));
-
-    gulp.src(
-      [
-        'front/assets/src/js/**/*.js',
-      ]
-    )
-      .pipe(babel({
-        presets: ['@babel/env']
-      }))
-      .pipe(rename({ basename: 'bnnp-front', dirname: '' }))
-      .pipe(gulp.dest('front/assets/dist/js'))
-      .pipe(uglify())
-      .pipe(rename({ basename: 'bnnp-front', suffix: '.min', dirname: '' }))
-      .pipe(gulp.dest('front/assets/dist/js'));
 
     cb();
   }

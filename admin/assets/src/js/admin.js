@@ -21,8 +21,9 @@ document.addEventListener("DOMContentLoaded", function () {
           let img = document.createElement('img');
           img.id = 'ban-lovely-monkey';
           img.src = 'https://monkey.banano.cc/api/v1/monkey/' + address;
-          document.getElementById('ban-address').parentElement.appendChild(img)
+          document.getElementById('ban-message-area').insertAdjacentElement('beforeBegin', img)
         }
+
       });
   });
 });
