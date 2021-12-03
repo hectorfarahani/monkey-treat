@@ -1,6 +1,6 @@
 <?php
 
-namespace Banano_Pay;
+namespace Monkey_Treat;
 
 //---------------------------------------------------------------
 // QRCode for PHP5

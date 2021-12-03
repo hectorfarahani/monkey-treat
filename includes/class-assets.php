@@ -1,6 +1,6 @@
 <?php
 
-namespace Banano_Pay\Includes;
+namespace Monkey_Treat\Includes;
 class Assets {
 
 	public static $instance = null;
@@ -38,11 +38,11 @@ class Assets {
 	}
 
 	public function register_front_scripts() {
-		wp_register_script( 'bnnp-front', BNNP_FRONT_ASSETS . 'js/bnnp-front' . $this->suffix . '.js', array( 'jquery' ), BNNP_VERSION, true );
+		wp_register_script( 'mtrt-front', MTRT_FRONT_ASSETS . 'js/mtrt-front' . $this->suffix . '.js', array( 'jquery' ), MTRT_VERSION, true );
 	}
 
 	public function register_front_styles() {
-		wp_register_style( 'bnnp-front', BNNP_FRONT_ASSETS . 'css/bnnp-front' . $this->suffix . '.css', array(), BNNP_VERSION, 'all' );
+		wp_register_style( 'mtrt-front', MTRT_FRONT_ASSETS . 'css/mtrt-front' . $this->suffix . '.css', array(), MTRT_VERSION, 'all' );
 	}
 
 	public function register_admin_assets() {
@@ -51,11 +51,11 @@ class Assets {
 	}
 
 	public function register_admin_scripts() {
-		wp_register_script( 'bnnp-admin', BNNP_ADMIN_ASSETS . 'js/bnnp-admin' . $this->suffix . '.js', BNNP_VERSION, true );
+		wp_register_script( 'mtrt-admin', MTRT_ADMIN_ASSETS . 'js/mtrt-admin' . $this->suffix . '.js', MTRT_VERSION, true );
 	}
 
 	public function register_admin_styles() {
-		wp_register_style( 'bnnp-admin', BNNP_ADMIN_ASSETS . 'css/bnnp-admin' . $this->suffix . '.css', array(), BNNP_VERSION, 'all' );
+		wp_register_style( 'mtrt-admin', MTRT_ADMIN_ASSETS . 'css/mtrt-admin' . $this->suffix . '.css', array(), MTRT_VERSION, 'all' );
 	}
 
 	public function localize() {
@@ -63,6 +63,6 @@ class Assets {
 			'ajaxurl' => admin_url( 'admin-ajax.php' ),
 		);
 
-		wp_localize_script( 'bnnp-front', 'BANANO_PAY', $i10n );
+		wp_localize_script( 'mtrt-front', 'monkey_treat', $i10n );
 	}
 }

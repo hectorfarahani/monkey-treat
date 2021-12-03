@@ -1,8 +1,8 @@
 <?php
 
-function bnnp_get_QR_code() {
-	$qr = Banano_Pay\QRCode::getMinimumQRCode(
-		bnnp_get_option('_banano_pay_address'),
+function mtrt_get_QR_code() {
+	$qr = Monkey_Treat\QRCode::getMinimumQRCode(
+		mtrt_get_option('_monkey_treat_address'),
 		QR_ERROR_CORRECT_LEVEL_L
 	);
 	$im = $qr->createImage(6, 8);
@@ -13,5 +13,5 @@ function bnnp_get_QR_code() {
 	ob_end_clean();
 	imagedestroy($im);
 
-	return '<figure class="bnnp-qr-code"><img src="data:image/png;base64,' . base64_encode($image_data) . '"></figure>';
+	return '<figure class="mtrt-qr-code"><img src="data:image/png;base64,' . base64_encode($image_data) . '"></figure>';
 }

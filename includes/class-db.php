@@ -1,6 +1,6 @@
 <?php
 
-namespace Banano_Pay\Includes;
+namespace Monkey_Treat\Includes;
 class DB {
 
 	public static $instance = null;
@@ -22,7 +22,7 @@ class DB {
 
 	public function init() {
 		global $wpdb;
-		$this->table           = $wpdb->prefix . BNNP_SLUG;
+		$this->table           = $wpdb->prefix . MTRT_SLUG;
 		$this->charset_collate = $wpdb->get_charset_collate();
 	}
 

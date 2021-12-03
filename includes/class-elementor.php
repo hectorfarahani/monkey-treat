@@ -1,6 +1,6 @@
 <?php
 
-namespace Banano_Pay\Includes;
+namespace Monkey_Treat\Includes;
 
 final class Elementor {
 
@@ -16,7 +16,7 @@ final class Elementor {
 	}
 
 	const MINIMUM_ELEMENTOR_VERSION = '2.0.0';
-	
+
 	public function __construct() {
 		add_action( 'plugins_loaded', [ $this, 'on_plugins_loaded' ] );
 	}
@@ -48,9 +48,9 @@ final class Elementor {
 
 	public function init_widgets() {
 		// Include Widget files
-		require_once __DIR__ . '/class-banano-pay-widget.php';
+		require_once __DIR__ . '/class-monkey-treat-widget.php';
 
 		// Register widget
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Banano_Pay_Widget() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Monkey_Treat_Widget() );
 	}
 }

@@ -1,6 +1,6 @@
 var version = '0.0.0';
 var versioningFiles = [
-  'banano-pay.php',
+  'monkey-treat.php',
   'constants.php',
   'readme.txt'
 ];
@@ -48,15 +48,15 @@ gulp.task(
       .pipe(
         wpPot(
           {
-            domain: 'banano-pay',
-            destFile: 'banano-pay.pot',
-            package: 'banano-pay',
-            lastTranslator: 'Banano Pay team<you@email.test>',
-            team: 'Banano Pay team <you@email.test>'
+            domain: 'monkey-treat',
+            destFile: 'monkey-treat.pot',
+            package: 'monkey-treat',
+            lastTranslator: 'Monkey Treat team<you@email.test>',
+            team: 'Monkey Treat team <you@email.test>'
           }
         )
       )
-      .pipe(gulp.dest('languages/banano-pay.pot'))
+      .pipe(gulp.dest('languages/monkey-treat.pot'))
   }
 );
 
@@ -92,10 +92,10 @@ gulp.task(
     )
       .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
       .pipe(save('before-dest'))
-      .pipe(rename({ basename: 'bnnp-admin', dirname: '' }))
+      .pipe(rename({ basename: 'mtrt-admin', dirname: '' }))
       .pipe(gulp.dest('admin/assets/dist/css'))
       .pipe(cleanCSS())
-      .pipe(rename({ basename: 'bnnp-admin', suffix: '.min', dirname: '' }))
+      .pipe(rename({ basename: 'mtrt-admin', suffix: '.min', dirname: '' }))
       .pipe(gulp.dest('admin/assets/dist/css'))
 
     cb();
@@ -114,10 +114,10 @@ gulp.task(
       .pipe(babel({
         presets: ['@babel/env']
       }))
-      .pipe(rename({ basename: 'bnnp-admin', dirname: '' }))
+      .pipe(rename({ basename: 'mtrt-admin', dirname: '' }))
       .pipe(gulp.dest('admin/assets/dist/js'))
       .pipe(uglify())
-      .pipe(rename({ basename: 'bnnp-admin', suffix: '.min', dirname: '' }))
+      .pipe(rename({ basename: 'mtrt-admin', suffix: '.min', dirname: '' }))
       .pipe(gulp.dest('admin/assets/dist/js'));
 
     cb();
@@ -131,7 +131,7 @@ gulp.task(
     gulp.src(versioningFiles)
       .pipe(
         replace(
-          /(\* Version:.+\s|BNNP_VERSION.*|Stable tag:.*\s)(\d+\.\d+\.\d+)/g,
+          /(\* Version:.+\s|MTRT_VERSION.*|Stable tag:.*\s)(\d+\.\d+\.\d+)/g,
           function (match, p1, p2) {
             if (p2 === version) {
               console.log('The current version is ' + version + '. No changes.')
@@ -186,7 +186,7 @@ gulp.task('watch', function (cb) {
 // Copy task
 gulp.task('copy', function () {
   return gulp.src(srcs)
-    .pipe(gulp.dest('/home/hector/svn-releases/banano-pay/trunk'))
+    .pipe(gulp.dest('/home/hector/svn-releases/monkey-treat/trunk'))
 })
 
 gulp.task('default', gulp.series('clean', 'version', 'generatePot', 'css', 'js'));

@@ -1,4 +1,4 @@
-=== Banano Pay ===
+=== Monkey Treat ===
 Contributors: h71
 Tags: Payment, Pay, Cryptocurrency, Donate, Donation, QR Code
 Requires at least: 5.2
@@ -20,15 +20,15 @@ Generate link and QR image to receive Banano donation. This is NOT official plug
 Follow the usual routine;
 
 1. Open WordPress admin, go to Plugins, click Add New
-2. Enter "banano pay" in search and hit Enter
+2. Enter "monkey treat" in search and hit Enter
 3. click "Install Now" and activate the plugin.
-4. Go to Settings > Banano Pay and enter your banano wallet address.
+4. Go to Settings > Monkey Treat and enter your banano wallet address.
 5. Double check the address with your monkey image.
-6. Use `['banano_pay']` shortcode to show the QR code on the website.
+6. Use `['monkey_treat']` shortcode to show the QR code on the website.
 
 == Screenshots ==
 
-1. Banano pay settings
+1. Monkey Treat settings
 
 == Frequently Asked Questions ==
 

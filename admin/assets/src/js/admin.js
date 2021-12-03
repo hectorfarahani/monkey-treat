@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let address = document.getElementById('ban-address').value;
     let nonce = document.getElementById('_wpnonce').value;
     var formData = new FormData();
-    formData.append('action', 'bnnp_validate_address');
+    formData.append('action', 'mtrt_validate_address');
     formData.append('nonce', nonce);
     formData.append('address', address);
     fetch(ajaxurl, {

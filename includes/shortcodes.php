@@ -1,7 +1,7 @@
 <?php
 
-function bnnp_shortcode(){
-	return bnnp_get_QR_code();
+function mtrt_shortcode(){
+	return mtrt_get_QR_code();
 }
 
-add_shortcode('banano_pay', 'bnnp_shortcode');
+add_shortcode('monkey_treat', 'mtrt_shortcode');

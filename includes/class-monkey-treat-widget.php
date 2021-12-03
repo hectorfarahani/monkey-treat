@@ -1,15 +1,15 @@
 <?php
 
-namespace Banano_Pay\Includes;
+namespace Monkey_Treat\Includes;
 
-class Banano_Pay_Widget extends \Elementor\Widget_Base {
+class Monkey_Treat_Widget extends \Elementor\Widget_Base {
 
 	public function get_name() {
-		return 'banano-pay';
+		return 'monkey-treat';
 	}
 
 	public function get_title() {
-		return __( 'Banano Pay', 'banano-pay' );
+		return __( 'Monkey Treat', 'monkey-treat' );
 	}
 
 	public function get_icon() {
@@ -23,7 +23,7 @@ class Banano_Pay_Widget extends \Elementor\Widget_Base {
 	protected function _register_controls() {}
 
 	protected function render() {
-		echo bnnp_get_QR_code();
+		echo mtrt_get_QR_code();
 	}
 
 }

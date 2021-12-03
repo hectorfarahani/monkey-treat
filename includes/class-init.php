@@ -1,6 +1,6 @@
 <?php
 
-namespace Banano_Pay\Includes;
+namespace Monkey_Treat\Includes;
 
 class Init {
 
