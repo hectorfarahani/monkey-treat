@@ -5,7 +5,7 @@ namespace Monkey_Treat;
 define( 'MTRT_PATH', plugin_dir_path( __FILE__ ) );
 define( 'MTRT_URL', plugin_dir_url( __FILE__ ) );
 
-define( 'MTRT_VERSION', '0.0.0' );
+define( 'MTRT_VERSION', '1.0.0' );
 define( 'MTRT_SLUG', 'monkey_treat' ); // snake_case
 
 define( 'MTRT_ADMIN_PATH', MTRT_PATH . 'admin/' );
