@@ -5,6 +5,7 @@
  * Description: ‌Generate link and QR image to receive Banano donation.
  * Version:     1.0.0
  * Author:      h71
+ * Author URI:      https://farahani.dev
  * Text Domain: monkey-treat
  * Domain Path: /languages
  * License:     GPLv3
