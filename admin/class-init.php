@@ -57,6 +57,8 @@ class Init {
 					<h1><?php esc_html_e( 'Monkey Treat', 'monkey-treat' ); ?></h1>
 				</span>
 				<p><?php esc_html_e( 'Unofficial Banano plugin for WordPress.', 'monkey-treat' ); ?></p>
+				<p><?php esc_html_e( 'Use the following shortcode to display donation QR code. If you are using Elemntor, use the Elementor widget.', 'monkey-treat' ); ?><code>[monkey_treat]</code></p>
+				<br>
 			</div>
 			<div class="mtrt-admin-main">
 				<section class="mtrt-settings">

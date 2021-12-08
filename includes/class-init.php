@@ -18,13 +18,10 @@ class Init {
 		return self::$instance;
 	}
 
-	// Create database and things.
+	// Create database.
 	public static function activate() {
-		$db = DB::instance();
-		$db->create();
 	}
 
 	public static function deactivate() {
-
 	}
 }
