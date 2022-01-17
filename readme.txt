@@ -1,22 +1,45 @@
-=== Super Plugin ===
+=== Monkey Treat ===
 Contributors: h71
-Donate link: https://dogechain.info/address/DHekFiwAXYc194FYD4jiv87PNv6WWD5K64
-Tags: Plugin, Boilerplate
-Requires at least: 5.1
-Tested up to: 5.6
+Tags: Payment, Pay, Cryptocurrency, Donate, Donation, QR Code
+Requires at least: 5.2
+Tested up to: 5.8.2
 Requires PHP: 7.0
-Stable tag: 0.0.0
+Stable tag: 1.0.0
 License: GPLv3
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+Donate link: https://farahani.dev/donation
 
-Short Description about super plugin.
+Generate link and QR image to receive Banano donation.
 
 == Description ==
 
-Detailed description about plugin. Use Youtube embed video, lists, images to present your plugin.
+Generate link and QR image to receive Banano donation. This is NOT official plugin of Banano and It is a community project made by love for Banano.
 
 == Installation ==
-1.
+
+Follow the usual routine;
+
+1. Open WordPress admin, go to Plugins, click Add New
+2. Enter "monkey treat" in search and hit Enter
+3. click "Install Now" and activate the plugin.
+4. Go to Settings > Monkey Treat and enter your banano wallet address.
+5. Double check the address with your monkey image.
+6. Use `['monkey_treat']` shortcode to show the QR code on the website.
+
+== Screenshots ==
+
+1. Monkey Treat settings
+
+== Frequently Asked Questions ==
+
+= Does this plugin needs access to the wallet? =
+
+No! This plugin is generating a QR code and link to your public wallet address. No access to any type of private keys or wallets are needed. Never share your private keys with someone else.
+
+= How can I find my wallet address? =
+
+You can use https://vault.banano.cc/ to get a Banano wallet. Also any other Banano wallet is supported.
+
 
 == Changelog ==
 

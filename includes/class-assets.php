@@ -1,6 +1,6 @@
 <?php
 
-namespace Super_Plugin\Includes;
+namespace Monkey_Treat\Includes;
 class Assets {
 
 	public static $instance = null;
@@ -38,11 +38,11 @@ class Assets {
 	}
 
 	public function register_front_scripts() {
-		wp_register_script( 'supl-front', SUPL_FRONT_ASSETS . 'js/supl-front' . $this->suffix . '.js', array( 'jquery' ), SUPL_VERSION, true );
+		wp_register_script( 'mtrt-front', MTRT_FRONT_ASSETS . 'js/mtrt-front' . $this->suffix . '.js', array( 'jquery' ), MTRT_VERSION, true );
 	}
 
 	public function register_front_styles() {
-		wp_register_style( 'supl-front', SUPL_FRONT_ASSETS . 'css/supl-front' . $this->suffix . '.css', array(), SUPL_VERSION, 'all' );
+		wp_register_style( 'mtrt-front', MTRT_FRONT_ASSETS . 'css/mtrt-front' . $this->suffix . '.css', array(), MTRT_VERSION, 'all' );
 	}
 
 	public function register_admin_assets() {
@@ -51,11 +51,11 @@ class Assets {
 	}
 
 	public function register_admin_scripts() {
-		wp_register_script( 'SUPL-admin', SUPL_ADMIN_ASSETS . 'js/supl-admin' . $this->suffix . '.js', SUPL_VERSION, true );
+		wp_register_script( 'mtrt-admin', MTRT_ADMIN_ASSETS . 'js/mtrt-admin' . $this->suffix . '.js', MTRT_VERSION, true );
 	}
 
 	public function register_admin_styles() {
-		wp_register_style( 'supl-admin', SUPL_ADMIN_ASSETS . 'css/supl-admin' . $this->suffix . '.css', array(), SUPL_VERSION, 'all' );
+		wp_register_style( 'mtrt-admin', MTRT_ADMIN_ASSETS . 'css/mtrt-admin' . $this->suffix . '.css', array(), MTRT_VERSION, 'all' );
 	}
 
 	public function localize() {
@@ -63,6 +63,6 @@ class Assets {
 			'ajaxurl' => admin_url( 'admin-ajax.php' ),
 		);
 
-		wp_localize_script( 'supl-front', 'SUPER_PLUGINS', $i10n );
+		wp_localize_script( 'mtrt-front', 'monkey_treat', $i10n );
 	}
 }

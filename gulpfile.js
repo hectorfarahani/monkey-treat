@@ -1,6 +1,6 @@
-var version = '0.0.0';
+var version = '1.0.0';
 var versioningFiles = [
-  'super-plugin.php',
+  'monkey-treat.php',
   'constants.php',
   'readme.txt'
 ];
@@ -17,13 +17,14 @@ var srcs = [
   '!*.yml',
   '!svn-assets/**',
   '!admin/assets/src/**',
-  '!front/assets/src/**'
 ];
+
+
 
 var gulp = require('gulp');
 var wpPot = require('gulp-wp-pot');
 var clean = require('gulp-clean');
-var sass = require('gulp-sass');
+var sass = require('gulp-sass')(require('sass'));
 var save = require('gulp-save');
 var rename = require('gulp-rename');
 var cleanCSS = require('gulp-clean-css');
@@ -40,7 +41,6 @@ gulp.task(
     var files = [
       '*.php',
       'admin/**/*.php',
-      'front/**/*.php',
       'includes/**/*.php',
     ];
 
@@ -48,15 +48,15 @@ gulp.task(
       .pipe(
         wpPot(
           {
-            domain: 'super-plugin',
-            destFile: 'super-plugin.pot',
-            package: 'super-plugin',
-            lastTranslator: 'Super Plugin team<you@email.test>',
-            team: 'Super Plugin team <you@email.test>'
+            domain: 'monkey-treat',
+            destFile: 'monkey-treat.pot',
+            package: 'monkey-treat',
+            lastTranslator: 'Monkey Treat team<you@email.test>',
+            team: 'Monkey Treat team <you@email.test>'
           }
         )
       )
-      .pipe(gulp.dest('languages/super-plugin.pot'))
+      .pipe(gulp.dest('languages/monkey-treat.pot'))
   }
 );
 
@@ -67,7 +67,6 @@ gulp.task(
     return gulp.src(
       [
         'admin/assets/dist/*',
-        'front/assets/dist/*',
         'languages/*',
       ]
     )
@@ -93,24 +92,12 @@ gulp.task(
     )
       .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
       .pipe(save('before-dest'))
-      .pipe(rename({ basename: 'supl-admin', dirname: '' }))
+      .pipe(rename({ basename: 'mtrt-admin', dirname: '' }))
       .pipe(gulp.dest('admin/assets/dist/css'))
       .pipe(cleanCSS())
-      .pipe(rename({ basename: 'supl-admin', suffix: '.min', dirname: '' }))
+      .pipe(rename({ basename: 'mtrt-admin', suffix: '.min', dirname: '' }))
       .pipe(gulp.dest('admin/assets/dist/css'))
 
-    gulp.src(
-      [
-        'front/assets/src/scss/front.scss',
-      ]
-    )
-      .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
-      .pipe(save('before-dest'))
-      .pipe(rename({ basename: 'supl-front', dirname: '' }))
-      .pipe(gulp.dest('front/assets/dist/css'))
-      .pipe(cleanCSS())
-      .pipe(rename({ basename: 'supl-front', suffix: '.min', dirname: '' }))
-      .pipe(gulp.dest('front/assets/dist/css'))
     cb();
   }
 );
@@ -127,25 +114,11 @@ gulp.task(
       .pipe(babel({
         presets: ['@babel/env']
       }))
-      .pipe(rename({ basename: 'supl-admin', dirname: '' }))
+      .pipe(rename({ basename: 'mtrt-admin', dirname: '' }))
       .pipe(gulp.dest('admin/assets/dist/js'))
       .pipe(uglify())
-      .pipe(rename({ basename: 'supl-admin', suffix: '.min', dirname: '' }))
+      .pipe(rename({ basename: 'mtrt-admin', suffix: '.min', dirname: '' }))
       .pipe(gulp.dest('admin/assets/dist/js'));
-
-    gulp.src(
-      [
-        'front/assets/src/js/**/*.js',
-      ]
-    )
-      .pipe(babel({
-        presets: ['@babel/env']
-      }))
-      .pipe(rename({ basename: 'supl-front', dirname: '' }))
-      .pipe(gulp.dest('front/assets/dist/js'))
-      .pipe(uglify())
-      .pipe(rename({ basename: 'supl-front', suffix: '.min', dirname: '' }))
-      .pipe(gulp.dest('front/assets/dist/js'));
 
     cb();
   }
@@ -158,7 +131,7 @@ gulp.task(
     gulp.src(versioningFiles)
       .pipe(
         replace(
-          /(\* Version:.+\s|SUPL_VERSION.*|Stable tag:.*\s)(\d+\.\d+\.\d+)/g,
+          /(\* Version:.+\s|MTRT_VERSION.*|Stable tag:.*\s)(\d+\.\d+\.\d+)/g,
           function (match, p1, p2) {
             if (p2 === version) {
               console.log('The current version is ' + version + '. No changes.')
@@ -213,7 +186,7 @@ gulp.task('watch', function (cb) {
 // Copy task
 gulp.task('copy', function () {
   return gulp.src(srcs)
-    .pipe(gulp.dest('/home/hector/svn-releases/super-plugin/trunk'))
+    .pipe(gulp.dest('/home/hector/svn-releases/monkey-treat/trunk'))
 })
 
 gulp.task('default', gulp.series('clean', 'version', 'generatePot', 'css', 'js'));

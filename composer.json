@@ -1,5 +1,5 @@
 {
-  "name": "hectorfarahani/super-plugin",
+  "name": "hectorfarahani/monkey-treat",
   "type": "wordpress-plugin",
   "license": "GPLv3",
   "authors": [
@@ -12,14 +12,14 @@
     "files": [
       "constants.php",
       "admin/ajax.php",
-      "includes/hooks.php",
-      "includes/ajax.php",
-      "includes/options.php"
+      "includes/options.php",
+      "includes/qr.php",
+      "includes/functions.php",
+      "includes/shortcodes.php"
     ],
     "classmap": [
       "admin",
-      "includes",
-      "front"
+      "includes"
     ]
   },
   "require": {
